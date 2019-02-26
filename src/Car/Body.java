@@ -9,16 +9,8 @@ package Car;
  * Jazda jazda {@link Car} najczęściej używany w tejże klasie.
  */
 
-
-public class Body {
-    private int price;
-
-
+public class Body extends Part{
     public Body(int price) {
-        this.price = price;
-    }
-
-    public int getPrice() {
-        return price;
+        super(price);
     }
 }

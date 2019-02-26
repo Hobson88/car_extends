@@ -1,0 +1,13 @@
+package Car;
+
+public class Part {
+    protected int price;
+
+    public Part (int price){
+        this.price = price;
+    }
+
+    public int getPrice(){
+        return price;
+    }
+}

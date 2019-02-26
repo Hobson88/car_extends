@@ -2,28 +2,31 @@ package Car;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class Car {
-    private Engine engine;
-    private Body body;
-    private List<Wheel> wheels;
-
-    public Car(Engine engine, Body body, List<Wheel> wheels) {
-        this.engine = engine;
-        this.body = body;
-        this.wheels = wheels;
-    }
+    private Collection<Part> parts;
     //zwraca PRICE  wszystkich kółek
-    private int sumWheels() {
-        int sum = 0;
-        for (Wheel w : wheels) {
-            sum += w.getPrice();
-        }
-        return sum;
+
+    Car (Part... parts){
+        this.parts = Arrays.asList(parts);
     }
 
-    int getTotalCost() {
-        return (engine.getPrice() + body.getPrice() + wheels.get(0).getPrice() + wheels.get(1).getPrice() + wheels.get(2).getPrice() + wheels.get(3).getPrice());
+    public int getTotalCost(){
+        // Wykorzystujemy stream(). dla każdego obiektu bierzemy
+      //  return parts.stream().mapToInt(parts ->parts.getPrice()).sum();
+
+        // Inna implementacja tego z góry
+        return parts.stream().mapToInt(Part::getPrice).sum();
+
+
+//        int sum = 0;
+//        for (Part part: parts
+//             ) {
+//            sum+=part.getPrice();
+//        }
+//        return sum;
     }
+
 }
