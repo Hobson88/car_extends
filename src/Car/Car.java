@@ -1,16 +1,14 @@
 package Car;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 public class Car {
-    private Collection<PartInterface> parts;
+    private Collection<Part> parts;
     //zwraca PRICE  wszystkich kółek
 
-    Car(Part... parts) {
-        this.parts = Arrays.asList(parts);
+    Car(BasePart... baseParts) {
+        this.parts = Arrays.asList(baseParts);
     }
 
     public int getTotalCost() {
@@ -18,11 +16,11 @@ public class Car {
         // return parts.stream().mapToInt(parts ->parts.getPrice()).sum();
 
         // Inna implementacja tego z góry
-        //return parts.stream().mapToInt(Part::getPrice).sum();
+        //return parts.stream().mapToInt(BasePart::getPrice).sum();
 
 
         int sum = 0;
-        for (PartInterface part : parts
+        for (Part part : parts
         ) {
             sum += part.getPrice();
         }

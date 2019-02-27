@@ -9,7 +9,7 @@ package Car;
  * Jazda jazda {@link Car} najczęściej używany w tejże klasie.
  */
 
-public class Body extends Part{
+public class Body extends BasePart {
     public Body(int price) {
         super(price);
     }

@@ -1,6 +1,6 @@
 package Car;
 
-public class Wheels extends Part {
+public class Wheels extends BasePart {
     private int numberOfWheels;
     public Wheels(int price, int numberOfWheels) {
         super(price);
