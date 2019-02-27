@@ -1,3 +1,4 @@
+/*
 package animal;
 
 import java.util.ArrayDeque;
@@ -7,18 +8,16 @@ import java.util.Collection;
 public class MainZoo {
 
     public static void main(String[] args) {
+
         Elephant elephant = new Elephant("George");
         Parrot parrot = new Parrot("Willy");
+
 
         Collection<Animal> animalsToEat = new ArrayList<>();
 
         animalsToEat.add(elephant);
         animalsToEat.add(parrot);
 
-        for (Animal a: animalsToEat
-             ) {
-            a.eat();
-        }
 
 //        elephant.sayHi();
 //        elephant.eat();
@@ -32,3 +31,4 @@ public class MainZoo {
 
 
 }
+*/
