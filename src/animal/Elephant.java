@@ -11,9 +11,8 @@ public class Elephant extends Animal {
     }
 
     @Override
-    public void sayHi() {
-        super.sayHi();
-        System.out.println("and I am elephant.");
+    protected String presentYourself() {
+        return "I am elephant.";
     }
 
     @Override

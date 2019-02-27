@@ -20,4 +20,9 @@ public class Parrot extends Animal {
         System.out.println("Parrot is moving");
     }
 
+    @Override
+    protected String presentYourself() {
+        return "I am parrot.";
+    }
+
 }

@@ -1,22 +1,40 @@
 package animal;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class MainZoo {
 
     public static void main(String[] args) {
-        Animal elephant = elephant();
-        Animal parrot = parrot();
+        Elephant elephant = elephant();
+        Parrot parrot = parrot();
 
-        elephant.sayHi();
-        elephant.eat();
-        elephant.move();
-        parrot.eat();
+        Collection<Animal> animalsToEat = new ArrayList<>();
+
+        animalsToEat.add(elephant);
+        animalsToEat.add(parrot);
+
+        for (Animal a: animalsToEat
+             ) {
+            a.eat();
+        }
+
+//        elephant.sayHi();
+//        elephant.eat();
+//        elephant.move();
+//        parrot.sayHi();
+//        parrot.eat();
+//
+//        parrot.talk();
+//        elephant.stomp();
     }
 
-    private static Animal parrot() {
+    private static Parrot parrot() {
         return new Parrot("Willy");
     }
 
-    private static Animal elephant() {
+    private static Elephant elephant() {
         return new Elephant("George");
     }
 }
