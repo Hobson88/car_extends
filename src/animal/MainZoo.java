@@ -7,8 +7,8 @@ import java.util.Collection;
 public class MainZoo {
 
     public static void main(String[] args) {
-        Elephant elephant = elephant();
-        Parrot parrot = parrot();
+        Elephant elephant = new Elephant("George");
+        Parrot parrot = new Parrot("Willy");
 
         Collection<Animal> animalsToEat = new ArrayList<>();
 
@@ -30,11 +30,5 @@ public class MainZoo {
 //        elephant.stomp();
     }
 
-    private static Parrot parrot() {
-        return new Parrot("Willy");
-    }
 
-    private static Elephant elephant() {
-        return new Elephant("George");
-    }
 }
